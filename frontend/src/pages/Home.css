@@ -1,0 +1,701 @@
+
+body{
+    overflow-x:hidden ;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*==============hero section design============*/
+
+
+
+.hero {
+ padding: 10px;
+  background: #f3f3f3;
+}
+
+.hero-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 500px;
+  margin: auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* RIGHT IMAGE (884px from design ≈ 60-65%) */
+.hero-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+}
+
+.hero-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* LEFT PANEL (1076px but shifted left) */
+.hero-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 70%;   /* instead of fixed 1076px */
+  height: 100%;
+
+  padding: 80px 60px;
+  color: white;
+
+  opacity: 0.95;
+
+  background: linear-gradient(135deg, #b30000, #ff1a1a);
+
+  display: flex;
+  align-items: center;
+
+  /* DIAGONAL CUT */
+  clip-path: polygon(0 0, 82% 0, 60% 100%, 0% 100%);
+
+  z-index: 2;
+}
+
+/* DARK BAND EFFECT */
+.hero-left::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    transparent 40%,
+    rgba(0,0,0,0.2) 50%,
+    transparent 60%
+  );
+}
+
+/* LIGHT STRIPES */
+.hero-left::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(255,255,255,0.04) 0px,
+    rgba(255,255,255,0.04) 2px,
+    transparent 2px,
+    transparent 14px
+  );
+}
+
+/* CONTENT */
+.content {
+  position: relative;
+  z-index: 3;
+  max-width: 420px;
+}
+
+.tag {
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.desc {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* BUTTON */
+
+.hero-btn2{
+    background-color: white;
+    color: black;
+    padding: 5px 15px;
+    border-radius: 25px;
+    display: flex;
+    gap: 20px;
+    width: 160px;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+  background: black;
+  color: white;
+  border-radius: 50%;
+}
+
+.circle i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 8px;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-left {
+    width: 100%;
+    clip-path: none;
+  }
+
+  .hero-right {
+    width: 100%;
+  }
+}
+
+
+
+
+
+/*================rating section design===============*/
+
+.rating{
+     background-color: #F0F0F0;
+     padding: 15px 0;
+}
+
+
+.rating-box {
+    margin-right: 20px;
+}
+
+.rating-content p{
+    padding-left: 25px;
+        margin-top: 0;
+    margin-bottom: 0rem;
+
+}
+
+.rating-content h5{
+    padding-left: 25px;
+    font-weight: 400;
+    font-size: 40px;
+    width: 10px;
+}
+
+
+/*==================biz section design====================*/
+
+.biz{
+    margin-top: 80px;
+}
+
+
+.biz-box h2{
+    font-weight: 400;
+    font-style: regular;
+    font-size: 40px;
+}
+
+.biz-box p {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.biz-box button{
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    padding: 10px;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+.biz-heading p{
+    color: #D5232E;
+}
+
+
+.biz-img img{
+width: 100px;
+height: 100px;
+}
+
+
+.right-content {
+   margin: 20px;
+}
+.right-content p{
+    font-size: 14px;
+}
+
+
+
+
+/*==============service section design=================*/
+
+.sevices{
+     background-color: #F0F0F0;
+     margin-top: 50px
+}
+
+.servies-heading h5{
+       display: flex;
+       justify-content: center;
+   font-weight: 400;
+    font-style: regular;
+    font-size: 40px;
+    padding: 50px;
+}
+
+.service-box{
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    min-height: 600px;
+    margin-bottom: 30px;
+}
+
+
+.services-heading1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.services-heading1 h5{
+    font-weight: 400;
+    font-style: regular;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.services-heading1 p{
+    font-weight: 400;
+    font-size: 15px;
+    color: #D5232E;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+.services-content p{
+   font-size: 16px;
+   padding: 5px;
+
+}
+
+.services-content h6{
+    font-weight: 400;
+    font-size: 24px;
+    padding: 5px;
+
+}
+
+.services-img img{
+    height: 250px;
+}
+
+
+
+
+/* =============team member design==========  */
+
+
+.team{
+    margin: 70px 0;
+}
+
+
+.experts h5{
+   display: flex;
+   font-weight: 400;
+    font-style: regular;
+    font-size: 40px;
+}
+
+.experts  p{
+ font-weight: 400;
+ font-size: 15px;
+}
+
+
+
+
+.member-name{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.member-name img{
+    width: 300px;
+    height: 350px;
+}
+
+.member-name h6{
+    padding-top: 20px;
+    font-weight: 500;
+}
+
+.member-name p{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.member-name i{
+color: #0077B5; 
+width: 30px;
+height: 30px;
+padding-top: 30px;
+cursor: pointer;
+
+}
+ 
+
+
+/* ==============client review==================== */
+
+.client {
+  background-color: #F0F0F0;
+  padding-bottom: 40px;
+ 
+}
+
+.client h5{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    font: Source Sans Pro;
+  font-weight: 400;
+  font-style: regular;
+  font-size: 40px;
+
+}
+
+.client0{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+} 
+
+.client0 img{
+    width: 40px;
+    height: 40px;
+}
+
+
+.client0 p{
+    padding: 10px;
+    align-items: center;
+    
+}
+
+.client1{
+    background-color: white;    
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+ .clientp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-size: 24;
+    font-weight: 300;
+}
+
+.client2{
+    background-color: #D5232E1A;
+    color: #D5232E;
+    width: 150px;
+    margin: 10px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    font-size: 13px;
+}
+
+.client3{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+
+/* ======================awards ==================== */
+
+
+.awards h5{
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    font-style: regular;
+    font-size: 40px;
+    padding: 20px;
+    padding-top: 40px;
+}
+
+.carousel-item {
+    margin-bottom: 25px;
+}
+
+.carousel-item img{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+}
+
+.carousel-item p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+/* ================workforc============== */
+
+.workforce {
+  background-color:#D5232E;
+  padding-bottom: 30px;
+  color: white;
+}
+
+.workforce h5{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    font: Source Sans Pro;
+  font-weight: 400;
+  font-style: regular;
+  font-size: 40px;
+
+}
+
+.workforce p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.workforce-btns {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* BASE BUTTON */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 6px 6px 6px 18px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+
+  width: 200px;
+  font-size: 14px;
+}
+
+/* LEFT BUTTON */
+.btn1 span{
+  background: white;
+  color: black;
+  padding: 6px 12px;
+  border-radius: 25px;
+    display: flex;
+  align-items: center;
+  border: 1px solid white;
+}
+
+/* RIGHT BUTTON */
+.btn2  span{
+      display: flex;
+  align-items: center;
+  background: #D5232E;
+  color: white;
+  border: 1px solid white;
+  padding: 6px 12px;
+  border-radius: 25px;
+}
+
+
+
+/* DEFAULT CIRCLE (BLACK) */
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+
+  background: black;
+  color: white;
+}
+
+/* WHITE CIRCLE FOR RED BUTTON */
+
+.circle-light1 {
+  background: #D5232E;
+  color: white;
+  margin-left: 25px;
+}
+
+
+.circle-light {
+  background: white;
+  color: #D5232E;
+  margin-left: 20px;
+}
+
+/* ICON FIX */
+.circle i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  padding: 6px;
+}
+
+
+
+
+
+@media (max-width: 1199px) {
+    .hero-right {
+        min-height: 520px;
+    }
+
+    .biz-box h2,
+    .servies-heading h5,
+    .experts h5,
+    .client h5,
+    .awards h5,
+    .workforce h5 {
+        font-size: 32px;
+    }
+
+    .service-box {
+        min-height: 640px;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero .col-6,
+    .rating .col-3,
+    .biz .col-4,
+    .sevices .col-6,
+    .team .col-4,
+    .client .col-4,
+    .client .col-6,
+    footer .col-3 {
+        width: 100%;
+    }
+
+    .hero-right {
+        min-height: 420px;
+    }
+
+    .hero-left {
+        min-height: 300px;
+    }
+
+    .hero-left img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .services-heading1 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .service-box {
+        min-height: auto;
+    }
+
+    .team-member {
+        margin-bottom: 24px;
+    }
+
+    .client0 {
+        justify-content: flex-start;
+    }
+
+    .carousel-item .d-flex {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .workforce h5 {
+        text-align: center;
+        line-height: 1.3;
+    }
+
+    .workforce p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero .position-relative {
+        padding: 20px !important;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .rating-content h5 {
+        font-size: 32px;
+    }
+
+    .biz-box h2,
+    .servies-heading h5,
+    .experts h5,
+    .client h5,
+    .awards h5,
+    .workforce h5 {
+        font-size: 26px;
+    }
+
+    .workforce-btns {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .workforce .btn1,
+    .workforce .btn2 {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+
+
+

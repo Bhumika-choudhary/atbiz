@@ -1,0 +1,43 @@
+.header-btn button{
+    background-color: black;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 25px;
+    border: none;
+    white-space: nowrap;
+}
+
+.nav-a a{
+    text-decoration: none;
+    font-style: none;
+    color: black;
+}
+
+.nav-a img {
+    width: 18px;
+    height: 18px;
+}
+
+.mobile-res a{
+    text-decoration: none;
+    font-style: none;
+    color: black;
+}
+
+@media (max-width: 1199px) {
+    .nav-a {
+        gap: 14px !important;
+        font-size: 14px;
+    }
+
+    .header-btn button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-a a {
+        padding: 4px 0;
+    }
+}
